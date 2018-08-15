@@ -1,0 +1,31 @@
+classes:
+- cluster.common.infra.salt-minion
+- cluster.common.infra.telegraf
+- cluster.common.infra.prometheus_client
+- cluster.common.infra.grafana_collector
+- cluster.common.infra.fluentd
+- cluster.common.drivetrain.repo
+- cluster.common.drivetrain.glusterfs_single
+- cluster.common.drivetrain.glusterfs
+- cluster.common.drivetrain.docker
+- cluster.common.drivetrain.haproxy_single
+- cluster.common.drivetrain.haproxy
+- cluster.common.drivetrain.openldap
+- cluster.common.drivetrain.gerrit
+- cluster.common.drivetrain.jenkins_single
+- cluster.common.drivetrain.jenkins
+- cluster.simplek8s.drivetrain.override
+parameters:
+  _param:
+    cluster_domain: local
+    cluster_name: simplek8s
+    salt_api_password: password
+    salt_master_host: 192.168.10.10
+    single_address: 192.168.10.13
+    stacklight_log_address: 192.168.10.14
+  linux:
+    system:
+      name: simplek8scid01
+      domain: local
+      cluster: default
+      environment: prd

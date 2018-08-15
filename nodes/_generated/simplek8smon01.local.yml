@@ -1,0 +1,31 @@
+classes:
+- cluster.common.infra.salt-minion
+- cluster.common.infra.telegraf
+- cluster.common.infra.prometheus_client
+- cluster.common.infra.grafana_collector
+- cluster.common.infra.fluentd
+- cluster.common.stacklight.repo
+- cluster.common.stacklight.glusterfs_single
+- cluster.common.stacklight.glusterfs
+- cluster.common.stacklight.docker
+- cluster.common.stacklight.haproxy_single
+- cluster.common.stacklight.haproxy
+- cluster.common.stacklight.grafana
+- cluster.common.stacklight.monitoring_single
+- cluster.common.stacklight.monitoring
+- cluster.simplek8s.stacklight.override
+parameters:
+  _param:
+    cid_host: 192.168.10.13
+    cluster_domain: local
+    cluster_name: simplek8s
+    openstack_proxy_address: 192.168.10.11
+    salt_master_host: 192.168.10.10
+    single_address: 192.168.10.12
+    stacklight_log_address: 192.168.10.14
+  linux:
+    system:
+      name: simplek8smon01
+      domain: local
+      cluster: default
+      environment: prd

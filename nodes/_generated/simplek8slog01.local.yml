@@ -1,0 +1,24 @@
+classes:
+- cluster.common.infra.salt-minion
+- cluster.common.infra.telegraf
+- cluster.common.infra.prometheus_client
+- cluster.common.infra.grafana_collector
+- cluster.common.infra.fluentd
+- cluster.common.lma.repo
+- cluster.common.lma.elasticsearch
+- cluster.common.lma.kibana
+- cluster.simplek8s.lma.override
+parameters:
+  _param:
+    cluster_domain: local
+    cluster_name: simplek8s
+    salt_api_password: password
+    salt_master_host: 192.168.10.10
+    single_address: 192.168.10.14
+    stacklight_log_address: 192.168.10.14
+  linux:
+    system:
+      name: simplek8slog01
+      domain: local
+      cluster: default
+      environment: prd

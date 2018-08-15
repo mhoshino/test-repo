@@ -1,0 +1,23 @@
+classes:
+- cluster.common.infra.salt-minion
+- cluster.common.infra.telegraf
+- cluster.common.infra.prometheus_client
+- cluster.common.infra.grafana_collector
+- cluster.common.infra.fluentd
+- cluster.common.k8s.repo
+- cluster.common.k8s.docker
+- cluster.simplek8s.k8s.override
+parameters:
+  _param:
+    cluster_domain: local
+    cluster_name: simplek8s
+    k8sctl_address: 192.168.10.11
+    salt_master_host: 192.168.10.10
+    stacklight_log_address: 192.168.10.14
+    single_address: '192.168.10.100'
+  linux:
+    system:
+      name: simplek8sk8scmp0
+      domain: local
+      cluster: default
+      environment: prd

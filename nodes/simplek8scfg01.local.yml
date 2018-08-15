@@ -1,0 +1,20 @@
+classes:
+- cluster.simplek8s.infra.config
+parameters:
+  _param:
+    linux_system_codename: xenial
+    reclass_data_revision: master
+    salt_master_host: simplek8scfg01.local
+    cluster_name: simplek8s
+    domain: local
+  linux:
+    system:
+      name: simplek8scfg01
+      domain: local
+  salt:
+    master:
+      worker_threads: 5
+  reclass:
+    storage:
+      data_source:
+        engine: local
